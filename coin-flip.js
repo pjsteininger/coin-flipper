@@ -43,13 +43,16 @@ $(document).ready(function () {
                 clearInterval(id);
                 clearInterval(document.getElementById("area").c);
                 if (rotation % 360 > 180) {
+                    settleDown();
                     console.log("tails");
-                    alert("TAILS");
+                    $("#result").text("TAILS");
+                    
                 } else {
+                    settleDown();
                     console.log("heads");
-                    alert("HEADS");
+                    $("#result").text("HEADS");
                 }
-                settleDown();
+
             } else {
                 xpos += xvel;
                 ypos += yvel;
