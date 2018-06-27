@@ -44,8 +44,10 @@ $(document).ready(function () {
                 clearInterval(document.getElementById("area").c);
                 if (rotation % 360 > 180) {
                     console.log("tails");
+                    alert("TAILS");
                 } else {
                     console.log("heads");
+                    alert("HEADS");
                 }
                 settleDown();
             } else {
