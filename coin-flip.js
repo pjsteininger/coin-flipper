@@ -5,7 +5,7 @@ $(document).ready(function () {
     };
     var stop = true;
     function flipCoin() {
-        rotation += 10;
+        rotation += 10 + 5 * Math.random();
         $("#coin").rotate(rotation);
     }
     function settleDown() {
@@ -29,6 +29,7 @@ $(document).ready(function () {
         }, 800);
     }
     function myMove() {
+        $("#area").off("click");
         var coin = $("#coin");
         var xpos = $("#coin").position().left;
         var ypos = $("#coin").position().top;
@@ -58,4 +59,3 @@ $(document).ready(function () {
     }
     $("#area").click(myMove);
 });
-
